@@ -2,6 +2,7 @@ import { Container, Header, ListContainer, Card, InputSearchContainer } from '..
 
 import edit from '../../assets/images/edit.svg';
 import trash from '../../assets/images/trash.svg';
+import { Link } from 'react-router-dom';
 
 export default function Home(){
   return(
@@ -15,7 +16,10 @@ export default function Home(){
 
       <Header>
         <strong>2 contatos</strong>
-        <a href='/'>Novo contato</a>
+        <Link to='/new'>
+          Novo contato
+        </Link>
+        {/* <a href='/'>Novo contato</a> */}
       </Header>
 
       <ListContainer>
