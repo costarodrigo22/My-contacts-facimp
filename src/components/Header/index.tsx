@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.svg';
 export function Header(){
   return(
     <Container>
-      <img src={logo} alt='Mycontacts' width={201} />
+      <img src={logo} alt='MyContacts' width={201} />
     </Container>
   );
 }
