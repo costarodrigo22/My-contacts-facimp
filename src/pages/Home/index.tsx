@@ -27,7 +27,7 @@ export default function Home(){
           <div className="info">
             <div className="contact-name">
               <strong>Rodrigo Costa</strong>
-              <small>Instalgram</small>
+              <small>Instagram</small>
             </div>
 
             <span>rodrigo@mail.com</span>
@@ -47,7 +47,7 @@ export default function Home(){
           <div className="info">
             <div className="contact-name">
               <strong>Rodrigo Costa</strong>
-              <small>Instalgram</small>
+              <small>Instagram</small>
             </div>
 
             <span>rodrigo@mail.com</span>
