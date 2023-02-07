@@ -19,7 +19,6 @@ export default function Home(){
         <Link to='/new'>
           Novo contato
         </Link>
-        {/* <a href='/'>Novo contato</a> */}
       </Header>
 
       <ListContainer>
@@ -35,29 +34,9 @@ export default function Home(){
           </div>
 
           <div className="actions">
-            <a href='/'>
+            <Link to='/edit/123'>
               <img src={edit} alt='edit'/>
-            </a>
-            <button>
-              <img src={trash} alt='delete'/>
-            </button>
-          </div>
-        </Card>
-        <Card>
-          <div className="info">
-            <div className="contact-name">
-              <strong>Rodrigo Costa</strong>
-              <small>Instagram</small>
-            </div>
-
-            <span>rodrigo@mail.com</span>
-            <span>(99)9 9193-0243</span>
-          </div>
-
-          <div className="actions">
-            <a href='/'>
-              <img src={edit} alt='edit'/>
-            </a>
+            </Link>
             <button>
               <img src={trash} alt='delete'/>
             </button>

@@ -9,6 +9,7 @@ export default styled.button`
   height: 52px;
   background: #5061FC;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
+  font-weight: bold;
   border-radius: 4px;
   border: none;
   color: #fff;
