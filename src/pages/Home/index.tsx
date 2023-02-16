@@ -25,24 +25,24 @@ interface TypeObjectFromContacts {
   category: TypeCategoryKeyFromContacts
 }
 
-export default function Home(){
+export default function Home() {
   const [contacts, setContacts] = useState<TypeObjectFromContacts[] | undefined>();
-  const [isLoading, setisLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:2000/api/contact/index')
       .then(async (response) => {
         const json = await response.json();
         setContacts(json.data);
-        setisLoading(false);
+        setIsLoading(false);
       });
   }, []);
 
   console.log(contacts);
 
-  return(
+  return (
     <Container>
-      <Loader isLoading={isLoading}/>
+      <Loader isLoading={isLoading} />
       <InputSearchContainer>
         <input
           type='text'
@@ -52,10 +52,10 @@ export default function Home(){
 
       <Header>
         <strong>
-          { contacts?.length }
-          { contacts?.length === 1 ? ' contato' : ' contatos' }
+          {contacts?.length}
+          {contacts?.length === 1 ? ' Contato' : ' Contatos'}
         </strong>
-        <Link to='/new'>
+        <Link to='/new' data-test="button-new">
           Novo contato
         </Link>
       </Header>
@@ -66,20 +66,20 @@ export default function Home(){
             <Card key={contact.id}>
               <div className="info">
                 <div className="contact-name">
-                  <strong>{ contact.name }</strong>
-                  <small>{ contact.category.name }</small>
+                  <strong>{contact.name}</strong>
+                  <small>{contact.category.name}</small>
                 </div>
 
-                <span>{ contact.email }</span>
-                <span>{ contact.telephone }</span>
+                <span>{contact.email}</span>
+                <span>{contact.telephone}</span>
               </div>
 
               <div className="actions">
-                <Link to={ `/edit/${contact.id}` }>
-                  <img src={edit} alt='edit'/>
+                <Link to={`/edit/${contact.id}`}>
+                  <img src={edit} alt='edit' />
                 </Link>
                 <button>
-                  <img src={trash} alt='delete'/>
+                  <img src={trash} alt='delete' />
                 </button>
               </div>
             </Card>

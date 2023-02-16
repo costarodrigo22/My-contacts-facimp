@@ -6,10 +6,10 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:cypress/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "overrides": [
-  ],
+  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -17,6 +17,7 @@
   },
   "plugins": [
     "react",
+    "cypress",
     "@typescript-eslint"
   ],
   "rules": {
@@ -37,5 +38,8 @@
       "error",
       "always"
     ]
+  },
+  "globals": {
+    "cy": true
   }
 }

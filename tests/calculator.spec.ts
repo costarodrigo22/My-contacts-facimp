@@ -1,5 +1,6 @@
 import calcFunctions from './calculator';
 const { sum, subtraction } = calcFunctions;
+import {describe, test, expect} from 'vitest';
 
 describe('Calculator tests', () => {
   test('add 1 + 2 to equal 3', () => {

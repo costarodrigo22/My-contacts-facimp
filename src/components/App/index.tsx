@@ -5,8 +5,8 @@ import { Container } from './styles';
 import { Header } from '../Header';
 import Routes from '../../routes';
 
-export function App(){
-  return(
+export function App() {
+  return (
     <BrowserRouter>
       <GlobalStyles />
       <Container>

@@ -24,7 +24,7 @@ interface TypeListCategory {
   updated_at: string,
 }
 
-export function ContactForm({ buttonLabel, onSubmit }: TypeContactForm){
+export function ContactForm({ buttonLabel, onSubmit }: TypeContactForm) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -39,18 +39,19 @@ export function ContactForm({ buttonLabel, onSubmit }: TypeContactForm){
       });
   }, []);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onSubmit({ name, email, telephone: phone, categories_id: category });
   }
 
-  return(
+  return (
     <Container onSubmit={handleSubmit}>
       <FormGroup >
         <Input
           placeholder='Nome'
           value={name}
           onChange={(event) => setName(event.target.value)}
+          data-test="input-name"
         />
       </FormGroup>
       <FormGroup >
@@ -83,7 +84,7 @@ export function ContactForm({ buttonLabel, onSubmit }: TypeContactForm){
       </FormGroup>
       <FormGroup >
         <Button type='submit'>
-          { buttonLabel }
+          {buttonLabel}
         </Button>
       </FormGroup>
     </Container>
